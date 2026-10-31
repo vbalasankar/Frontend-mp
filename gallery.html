@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101812">
+  <meta name="description" content="Explore all 41 frontend exercises in the V Bala Sankar project collection.">
+
+  <title>Frontend Lab — Project Gallery</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="gallery.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body id="top" data-page="gallery">
+
+  <!-- NAVIGATION -->
+  <header class="topbar">
+
+    <a class="identity" href="gallery.html" aria-label="Frontend Lab home">
+      <span class="identity-symbol">V<span>/</span></span>
+
+      <span class="identity-name">
+        FRONTEND
+        <span>LAB · PROJECT ARCHIVE</span>
+      </span>
+    </a>
+
+    <nav class="topnav" aria-label="Main navigation">
+      <a class="topnav-link current" href="#work">Projects</a>
+      <a class="topnav-link" href="index.html">All-in-one</a>
+    </nav>
+
+    <a class="topbar-action" href="#work">
+      Explore archive <span>↗</span>
+    </a>
+
+  </header>
+
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="intro" aria-labelledby="intro-title">
+
+      <div class="intro-grid">
+
+        <div class="intro-copy">
+
+          <div class="kicker">
+            <span class="kicker-line"></span>
+            FRONTEND DEVELOPMENT · COLLECTION 01
+          </div>
+
+          <h1 id="intro-title">
+            Ideas become<br>
+            <em>interfaces.</em>
+          </h1>
+
+          <p class="intro-lede">
+            A hands-on archive of 41 browser projects — from
+            foundational HTML layouts to interactive JavaScript
+            experiences. Pick a project and open the working page.
+          </p>
+
+          <div class="intro-actions">
+
+            <a class="action-primary" href="#work">
+              Browse projects <span>↓</span>
+            </a>
+
+            <a class="action-secondary" href="index.html">
+              View continuous index <span>↗</span>
+            </a>
+
+          </div>
+
+          <div class="intro-metrics">
+
+            <div>
+              <strong>41</strong>
+              <span>PROJECTS</span>
+            </div>
+
+            <div>
+              <strong>03</strong>
+              <span>WEB LANGUAGES</span>
+            </div>
+
+            <div>
+              <strong>01</strong>
+              <span>COLLECTION</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- FEATURED PROJECT PREVIEWS -->
+        <div class="intro-visual" aria-label="Featured project previews">
+
+          <div class="visual-grid"></div>
+
+          <div class="visual-orbit orbit-a"></div>
+          <div class="visual-orbit orbit-b"></div>
+
+
+          <a class="feature-frame feature-large" href="site.html?id=40" aria-label="Open project 40, GRAVITAS 2026">
+
+            <div class="frame-chrome">
+              <span class="chrome-dots">
+                <i></i><i></i><i></i>
+              </span>
+
+              <span>FEATURED / 040</span>
+              <span>↗</span>
+            </div>
+
+            <iframe src="sites/40.html" title="GRAVITAS 2026 preview" loading="lazy" tabindex="-1">
+            </iframe>
+
+            <div class="feature-label">
+              <span>EVENT EXPERIENCE</span>
+              <strong>GRAVITAS 2026</strong>
+            </div>
+
+          </a>
+
+
+          <a class="feature-frame feature-small feature-google" href="site.html?id=17"
+            aria-label="Open project 17, Google company profile">
+
+            <div class="frame-chrome">
+              <span class="chrome-dots">
+                <i></i><i></i><i></i>
+              </span>
+
+              <span>017 / PROFILE</span>
+            </div>
+
+            <iframe src="sites/17.html" title="Google company profile preview" loading="lazy" tabindex="-1">
+            </iframe>
+
+          </a>
+
+
+          <a class="feature-frame feature-small feature-campus" href="site.html?id=38"
+            aria-label="Open project 38, Campus image viewer">
+
+            <div class="frame-chrome">
+              <span class="chrome-dots">
+                <i></i><i></i><i></i>
+              </span>
+
+              <span>038 / VIEWER</span>
+            </div>
+
+            <iframe src="sites/38.html" title="Campus image viewer preview" loading="lazy" tabindex="-1">
+            </iframe>
+
+          </a>
+
+
+          <div class="visual-index">
+            <span>SELECTED WORK</span>
+            <strong>01—41</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="intro-bottom">
+        <span>BUILT WITH HTML · CSS · JAVASCRIPT</span>
+
+        <span class="bottom-rule"></span>
+
+        <span>
+          V BALA SANKAR <b>·</b> 23MIC0004
+        </span>
+      </div>
+
+    </section>
+
+
+    <!-- PROJECT ARCHIVE -->
+    <section class="work-section" id="work" aria-labelledby="work-title">
+
+      <div class="work-wrap">
+
+        <div class="work-heading">
+
+          <div>
+
+            <div class="kicker dark-kicker">
+              THE PROJECT ARCHIVE <span>01 / 41</span>
+            </div>
+
+            <h2 id="work-title">
+              Explore the<br>
+              <em>collection.</em>
+            </h2>
+
+          </div>
+
+          <p class="work-description">
+            Browse by topic, search for a specific exercise,
+            or sort the archive. Every card opens its own
+            project page.
+          </p>
+
+        </div>
+
+
+        <!-- FILTER AND SEARCH CONTROLS -->
+        <div class="control-panel">
+
+          <div class="control-topline">
+            <span>01 — FILTER THE ARCHIVE</span>
+            <span>USE THE SEARCH OR SELECT A CATEGORY</span>
+          </div>
+
+          <div class="control-row">
+
+            <div class="filter-list" id="gallery-filters" aria-label="Filter projects by category">
+            </div>
+
+
+            <div class="search-sort">
+
+              <label class="search-field" for="gallery-search">
+
+                <span class="search-glyph" aria-hidden="true">⌕</span>
+
+                <input id="gallery-search" type="search" placeholder="Find a project..." autocomplete="off">
+
+                <kbd>/</kbd>
+
+              </label>
+
+
+              <label class="sort-field">
+
+                <span>SORT</span>
+
+                <select id="gallery-sort" aria-label="Sort projects">
+                  <option value="number">Number</option>
+                  <option value="name">A — Z</option>
+                </select>
+
+              </label>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ARCHIVE STATUS -->
+        <div class="archive-status">
+
+          <p>
+            <strong id="visible-count">41</strong>
+            <span>PROJECTS FOUND</span>
+            <span class="status-context" id="result-context">
+              · COMPLETE COLLECTION
+            </span>
+          </p>
+
+          <span class="live-status">
+            <i></i>
+            LIVE PROJECT PREVIEWS
+          </span>
+
+        </div>
+
+
+        <!-- PROJECT CARDS GENERATED BY JAVASCRIPT -->
+        <div class="project-grid" id="project-list" aria-live="polite">
+        </div>
+
+
+        <!-- EMPTY SEARCH RESULT -->
+        <div class="empty-state" id="empty-message" hidden>
+
+          <div class="empty-symbol">⌕</div>
+
+          <h3>No projects found.</h3>
+
+          <p>
+            Try a different keyword or clear the selected category.
+          </p>
+
+          <button type="button" id="clear-search">
+            Reset archive ↗
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- END SECTION -->
+    <section class="endcap">
+
+      <div class="endcap-inner">
+
+        <div>
+
+          <span class="endcap-kicker">
+            THAT'S THE COLLECTION
+          </span>
+
+          <h2>
+            Keep building.<br>
+            <em>Keep exploring.</em>
+          </h2>
+
+        </div>
+
+        <a href="#top" class="back-top">
+          BACK TO TOP <span>↑</span>
+        </a>
+
+      </div>
+
+      <div class="endcap-number">41</div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <a class="identity footer-identity" href="gallery.html">
+
+      <span class="identity-symbol">
+        V<span>/</span>
+      </span>
+
+      <span class="identity-name">
+        FRONTEND
+        <span>LAB · PROJECT ARCHIVE</span>
+      </span>
+
+    </a>
+
+    <p>
+      41 exercises · PDF-based frontend reconstruction
+    </p>
+
+    <span class="footer-credit">
+      V BALA SANKAR <b>·</b> 23MIC0004
+    </span>
+
+  </footer>
+  <script src="app.js" defer></script>
+</body>
+
+</html>

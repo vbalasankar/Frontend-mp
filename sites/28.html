@@ -1,0 +1,12 @@
+<!-- PDF source: pages 104-107 -->
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Course Registration</title><style>
+body{font-family:Arial}.container{width:400px;margin:30px auto;padding:20px;border:1px solid black}h1{text-align:center}label{display:block;margin-top:10px}input[type=text],select{width:100%;padding:7px;box-sizing:border-box;margin-top:5px}.error{color:red}#output{margin-top:20px;border:1px solid black;padding:10px}button{padding:7px 15px;margin-top:15px}
+</style></head><body><div class="container"><h1>Course Registration</h1><form id="courseForm" novalidate>
+<label>Student Name</label><input type="text" id="name" placeholder="Enter student name"><div id="nameError" class="error"></div>
+<label>Department</label><select id="department"><option value="">Select Department</option><option value="CSE">CSE</option><option value="IT">IT</option><option value="ECE">ECE</option><option value="EEE">EEE</option></select>
+<label>Programming Languages (Select one or more)</label><select id="languages" multiple size="4"><option>Java</option><option>Python</option><option>JavaScript</option><option>C++</option></select>
+<button type="submit">Register</button> <button type="reset">Clear</button></form><div id="output"></div></div>
+<script>
+document.getElementById('courseForm').addEventListener('submit',function(e){e.preventDefault();const name=document.getElementById('name').value.trim(),dept=document.getElementById('department').value,langs=[...document.getElementById('languages').selectedOptions].map(x=>x.value);const valid=/^[A-Za-z ]+$/.test(name);document.getElementById('nameError').textContent=valid?'':'Name must contain only alphabets and spaces.';if(!valid)return;if(!dept||!langs.length){document.getElementById('output').textContent='Please select a department and at least one programming language.';return;}const safe=value=>String(value).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');document.getElementById('output').innerHTML='<b>Registration Details</b><br>Student Name: '+safe(name)+'<br>Department: '+safe(dept)+'<br>Programming Languages: '+safe(langs.join(', '));});
+document.getElementById('courseForm').addEventListener('reset',()=>{document.getElementById('nameError').textContent='';document.getElementById('output').textContent='';});
+</script></body></html>

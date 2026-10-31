@@ -1,0 +1,16 @@
+<!-- PDF source: pages 96-99; screenshot code reconstructed from displayed source -->
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Student Login</title><style>
+body{font-family:Arial,sans-serif}.container{width:400px;max-width:calc(100% - 32px);margin:30px auto;padding:20px;border:1px solid black}h1{text-align:center}label{display:block;margin-top:10px}input[type=text],input[type=password]{width:100%;padding:7px;box-sizing:border-box;margin-top:5px}.option{width:auto}.error{color:red;font-size:14px}#output{margin-top:20px;color:green;font-weight:bold}button{padding:7px 15px;margin-top:15px}
+</style></head><body><div class="container"><h1>Student Login</h1><form id="loginForm" novalidate>
+<label for="username">Username or Email Address</label><input type="text" id="username" placeholder="Enter username or email"><div id="usernameError" class="error"></div>
+<label for="password">Password</label><input type="password" id="password" placeholder="Enter password" minlength="6"><div id="passwordError" class="error"></div>
+<label><input type="checkbox" class="option" id="remember"> Remember Me</label><label>User Role</label><label><input class="option" type="radio" name="role" value="Student"> Student</label><label><input class="option" type="radio" name="role" value="Faculty"> Faculty</label><div id="roleError" class="error"></div>
+<label>Login Instructions</label><audio controls><source src="login.mp3" type="audio/mpeg"></audio><br><a href="#">Forgot Password?</a><br><a href="#">Create New Account</a><br><button type="submit">Login</button> <button type="reset">Clear</button>
+</form><div id="output"></div></div>
+<script>
+document.getElementById('loginForm').addEventListener('submit',function(e){e.preventDefault();
+const u=document.getElementById('username').value.trim(),p=document.getElementById('password').value,role=document.querySelector('input[name="role"]:checked');
+document.getElementById('usernameError').textContent=u?'':'Please enter username or email';document.getElementById('passwordError').textContent=p?'':'Please enter password';document.getElementById('roleError').textContent=role?'':'Please select a user role';
+if(!u||!p||!role)return;document.getElementById('output').textContent='Login Details: '+u+' | '+role.value;});
+document.getElementById('loginForm').addEventListener('reset',()=>{document.querySelectorAll('.error').forEach(x=>x.textContent='');document.getElementById('output').textContent='';});
+</script></body></html>

@@ -1,0 +1,7 @@
+<!-- PDF source: pages 108-109 -->
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Interactive Product Card</title></head><body>
+<div id="card" style="border:1px solid #000;width:220px;padding:15px;text-align:center;">
+<img id="img" src="https://placeholder.com" alt="Product" style="width:150px;transition:0.3s;" onerror="this.src='../assets/product-placeholder.svg';">
+<h3>Product Name</h3><p id="info"></p><button id="btn">View Details</button><p id="details"></p></div>
+<script>var img=document.getElementById('img');var info=document.getElementById('info');var btn=document.getElementById('btn');var details=document.getElementById('details');img.onmouseover=function(){img.style.transform='scale(1.1)';img.style.opacity='0.8';info.innerHTML='High-quality premium material. Durable design.';};img.onmouseout=function(){img.style.transform='scale(1)';img.style.opacity='1';info.innerHTML='';};btn.onclick=function(){details.innerHTML='Price: Rs. 2499 <br> Status: In Stock';};</script>
+</body></html>

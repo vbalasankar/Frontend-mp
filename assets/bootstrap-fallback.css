@@ -1,0 +1,31 @@
+/* Minimal local Bootstrap-compatible utilities for offline screenshots.
+   The pages retain the Bootstrap 5.3.3 CDN link present in the PDF. */
+*,*::before,*::after{box-sizing:border-box}
+.container,.container-fluid{width:100%;padding-right:12px;padding-left:12px;margin-right:auto;margin-left:auto}
+.container{max-width:1140px}
+.row{display:flex;flex-wrap:wrap;margin-right:-12px;margin-left:-12px}
+.row>*{flex-shrink:0;width:100%;max-width:100%;padding-right:12px;padding-left:12px}
+.g-4{--bs-gutter-y:24px;row-gap:24px}
+.justify-content-center{justify-content:center!important}.align-items-stretch{align-items:stretch!important}
+.d-flex{display:flex!important}.flex-column{flex-direction:column!important}.justify-content-between{justify-content:space-between!important}
+.w-100{width:100%!important}.my-5{margin-top:3rem!important;margin-bottom:3rem!important}
+.p-4{padding:1.5rem!important}.mb-3{margin-bottom:1rem!important}.mb-4{margin-bottom:1.5rem!important}.mb-5{margin-bottom:3rem!important}.mt-2{margin-top:.5rem!important}
+.text-center{text-align:center!important}.fw-semibold{font-weight:600!important}.lead{font-size:1.25rem;font-weight:300;line-height:1.5}
+.card{position:relative;display:flex;flex-direction:column;min-width:0;overflow-wrap:break-word;background:#fff;background-clip:border-box;border:1px solid rgba(0,0,0,.125);border-radius:.375rem}
+.card-body{flex:1 1 auto;padding:1rem}.card-title{margin-bottom:.5rem}.form-label{display:inline-block;margin-bottom:.5rem}
+.form-control{display:block;width:100%;padding:.375rem .75rem;font-size:1rem;font-weight:400;line-height:1.5;color:#212529;background:#fff;border:1px solid #ced4da;border-radius:.375rem;transition:border-color .15s,box-shadow .15s}
+.form-control:focus{color:#212529;background:#fff;border-color:#86b7fe;outline:0;box-shadow:0 0 0 .25rem rgba(13,110,253,.25)}
+.btn{display:inline-block;padding:.375rem .75rem;font-size:1rem;font-weight:400;line-height:1.5;text-align:center;text-decoration:none;vertical-align:middle;border:1px solid transparent;border-radius:.375rem;cursor:pointer}
+.btn-primary{color:#fff;background:#0d6efd;border-color:#0d6efd}.btn-primary:hover{background:#0b5ed7;border-color:#0a58ca}.btn-lg{padding:.5rem 1rem;font-size:1.25rem;border-radius:.5rem}
+.shadow-sm{box-shadow:0 .125rem .25rem rgba(0,0,0,.075)!important}
+.navbar{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:.5rem 0}.navbar-expand-lg .navbar-nav{flex-direction:row}.navbar-dark .navbar-nav .nav-link{color:rgba(255,255,255,.75)}.navbar-dark .navbar-nav .nav-link:hover{color:#fff}.navbar-nav{display:flex;list-style:none;padding-left:0;margin-bottom:0}.nav-link{display:block;padding:.5rem 1rem;text-decoration:none}.bg-dark{background:#212529!important}.navbar-dark{background:#212529;color:#fff}.py-3{padding-top:1rem!important;padding-bottom:1rem!important}
+@media(min-width:768px){.col-md-6{flex:0 0 auto;width:50%}}
+@media(min-width:992px){.col-lg-4{flex:0 0 auto;width:33.33333333%}.col-lg-5{flex:0 0 auto;width:41.66666667%}.navbar-expand-lg{flex-wrap:nowrap;justify-content:flex-start}}
+/* Bootstrap-like responsive container breakpoints and centered navigation. */
+.mx-auto{margin-left:auto!important;margin-right:auto!important}
+.nav-links{margin-left:auto!important;margin-right:auto!important}
+@media(min-width:576px){.container{max-width:540px}}
+@media(min-width:768px){.container{max-width:720px}}
+@media(min-width:992px){.container{max-width:960px}}
+@media(min-width:1200px){.container{max-width:1140px}}
+@media(min-width:1400px){.container{max-width:1320px}}

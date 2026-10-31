@@ -1,0 +1,15 @@
+<!-- PDF source: pages 65-68 -->
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>National Technical Symposium</title></head><body>
+<h1>Registration Portal</h1><audio controls><source src="welcome.mp3" type="audio/mpeg"></audio>
+<h2>Intro Video</h2><video controls width="400"><source src="not so still world.mp4" type="video/mp4"></video>
+<form action="#" method="post" enctype="multipart/form-data">
+<p><label>Participant Name <input type="text" name="participant_name" required pattern="[A-Za-z ]+" minlength="3" maxlength="60"></label></p>
+<p><label>Register Number <input type="text" name="register_number" required></label></p><p><label>College Name <input type="text" name="college_name" required></label></p>
+<p><label>Email ID <input type="email" name="email_id" required></label></p><p><label>Mobile Number <input type="tel" name="mobile_number" required pattern="[0-9]{10}" maxlength="10"></label></p>
+<p><label>Date of Birth <input type="date" name="dob" required></label></p>
+<p>Gender: <label><input type="radio" name="gender" value="Male" required> Male</label> <label><input type="radio" name="gender" value="Female"> Female</label> <label><input type="radio" name="gender" value="Other"> Other</label></p>
+<p><label>Department <select name="department" required><option value="">Select Department</option><option>CSE</option><option>ECE</option><option>EEE</option><option>MECH</option><option>CIVIL</option></select></label></p>
+<p>Skills: <label><input type="checkbox" name="skills" value="C"> C</label> <label><input type="checkbox" name="skills" value="C++"> C++</label> <label><input type="checkbox" name="skills" value="Java"> Java</label> <label><input type="checkbox" name="skills" value="Python"> Python</label> <label><input type="checkbox" name="skills" value="HTML"> HTML</label></p>
+<p><label>Upload ID Card <input type="file" name="id_card" accept="image/*,.pdf" required></label></p><p><label>Event Date <input type="date" name="event_date" required></label></p>
+<button type="submit">Submit</button> <button type="reset">Reset</button>
+</form></body></html>

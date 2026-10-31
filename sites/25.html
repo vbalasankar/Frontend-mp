@@ -1,0 +1,27 @@
+<!-- PDF source: pages 92-95; source code was embedded as screenshots -->
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Employee Registration</title><style>
+body{font-family:Arial,sans-serif;background:#f3f3f3}.container{width:560px;max-width:calc(100% - 32px);margin:25px auto;padding:20px;border:1px solid #222;background:white}h2{text-align:center}label{display:block;margin-top:10px}input,select{padding:7px;width:100%;box-sizing:border-box;margin-top:4px}.option{width:auto}#output{margin-top:20px}table{border-collapse:collapse;width:100%}td,th{border:1px solid #555;padding:8px;text-align:left}
+</style></head><body><div class="container"><h2>Employee Registration Form</h2>
+<form id="employeeForm">
+<label>Full Name<input id="name" type="text" placeholder="Enter your full name" required></label>
+<label>Employee ID<input id="employeeId" type="text" placeholder="Enter employee ID" required></label>
+<label>Email Address<input id="email" type="email" placeholder="Enter email address" required></label>
+<label>Password<input id="password" type="password" required></label><label>Confirm Password<input id="confirmPassword" type="password" required></label>
+<label>Date of Birth<input id="dob" type="date" required></label>
+<label>Gender</label><label><input class="option" type="radio" name="gender" value="Male"> Male</label><label><input class="option" type="radio" name="gender" value="Female"> Female</label><label><input class="option" type="radio" name="gender" value="Other"> Other</label>
+<label>Department<select id="department" required><option value="">Select Department</option><option>Human Resources</option><option>Information Technology</option><option>Finance</option><option>Marketing</option><option>Sales</option></select></label>
+<label>Skills</label><label><input class="option" type="checkbox" name="skills" value="HTML"> HTML</label><label><input class="option" type="checkbox" name="skills" value="CSS"> CSS</label><label><input class="option" type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+<label>Mobile Number<input id="mobile" type="tel" required></label><label>Profile Photo<input id="photo" type="file" accept="image/*"></label>
+<button type="submit">Register</button> <button type="reset">Clear</button>
+</form><div id="output"></div></div>
+<script>
+document.getElementById('employeeForm').addEventListener('submit',function(e){e.preventDefault();
+const name=document.getElementById('name').value.trim(),employeeId=document.getElementById('employeeId').value.trim(),email=document.getElementById('email').value.trim(),password=document.getElementById('password').value,confirmPassword=document.getElementById('confirmPassword').value,dob=document.getElementById('dob').value,department=document.getElementById('department').value,mobile=document.getElementById('mobile').value.trim(),photo=document.getElementById('photo').files[0]?.name||'Not selected';
+const gender=document.querySelector('input[name="gender"]:checked');const skills=[...document.querySelectorAll('input[name="skills"]:checked')].map(x=>x.value);
+if(!name||!employeeId||!email||!password||!confirmPassword||!dob||!department||!mobile||!gender){alert('Please fill all the fields.');return;}
+if(skills.length===0){alert('Please select at least one skill.');return;}if(password!==confirmPassword){alert('Password and Confirm Password do not match.');return;}
+const rows=[['Full Name',name],['Employee ID',employeeId],['Email Address',email],['Password',password],['Date of Birth',dob],['Gender',gender.value],['Department',department],['Skills',skills.join(', ')],['Mobile Number',mobile],['Profile Photo',photo]];
+const safe=value=>String(value).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');let output='<h3>Employee Details</h3><table><tr><th>Field</th><th>Value</th></tr>'+rows.map(r=>'<tr><td>'+safe(r[0])+'</td><td>'+safe(r[1])+'</td></tr>').join('')+'</table>';document.getElementById('output').innerHTML=output;alert('Registration Successful!');
+});
+document.getElementById('employeeForm').addEventListener('reset',()=>document.getElementById('output').innerHTML='');
+</script></body></html>
